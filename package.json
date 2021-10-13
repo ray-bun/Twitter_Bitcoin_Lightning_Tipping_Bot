@@ -1,8 +1,8 @@
 {
-  "name": "sats4salvadoran",
+  "name": "satoshi_ln_bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "startBot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,6 @@
     "jimp": "^0.16.1",
     "jsqr": "^1.4.0",
     "lnurl": "^0.18.0",
-    "mysql": "^2.18.1",
     "node-fetch": "^2.6.1",
     "pastebin-api": "^2.2.0",
     "qrcode-reader": "^1.0.4",

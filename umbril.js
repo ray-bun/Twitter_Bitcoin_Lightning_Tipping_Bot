@@ -1,6 +1,6 @@
 const axios = require("axios");
 const config = require("./config.js");
-const QueryDatabase = require("./mysql");
+
 let randomSeconds = Math.floor(Math.random() * 10);
 
 module.exports.getJWTToken = function getJWTToken() {
@@ -145,33 +145,3 @@ module.exports.makePayment = function makePayment(qrcode, payoutAmount, checkUse
   });
 };
 
-module.exports.giveAwayMakePayment = function giveAwayMakePayment() {
-  return new Promise(async (resolve, reject) => {
-    try {
-      //get JWT Token
-      let checkPendingPayout = await QueryDatabase.QueryGiveAwayPendingPayout();
-      //console.log(checkPendingPayout)
-      if (checkPendingPayout) {
-        if (checkPendingPayout.amount <= config.maxTipAmount) {
-          let JWTToken = await this.getJWTToken();
-          console.log("JWT Token: ", JWTToken);
-          //Pay invoice
-          console.log(`Executing makePayment function, invoice: ${checkPendingPayout.invoice} ${checkPendingPayout.amount}`);
-          await QueryDatabase.UpdateGiveAwayPaid(checkPendingPayout.payoutKey);
-          // Updated database
-          let executePaymentAndFee = await payInvoice(JWTToken, checkPendingPayout.invoice, 0);
-          if (executePaymentAndFee) {
-            console.log("Database updated");
-            console.log("Executing Done, going to resolve");
-            resolve({ fee: executePaymentAndFee, amount: checkPendingPayout.amount, time: checkPendingPayout.time, threadID: checkPendingPayout.threadID });
-          }
-        }
-      } else {
-        reject("Nothing to process");
-      }
-    } catch (err) {
-      console.log(err);
-      reject(err);
-    }
-  });
-};

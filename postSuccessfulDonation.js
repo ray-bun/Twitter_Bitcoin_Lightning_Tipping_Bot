@@ -22,12 +22,9 @@ async function checkForNewSuccessfulDonation() {
         sendPaymentConfirmationTweet(tweetPayLoad);
         //Update database
         supabase.UpdateDonated(searchDonor.idThread);
-        //QueryDatabase.UpdateDonated(searchDonor.idThread);
-        //console.log("Found");
         //update BIO
         updateTwitterBio();
 
-        //Post to twitter and update database
       }
     }
   } catch (err) {
