@@ -10,6 +10,6 @@ I also recommended that you add your umbrel node IP address x.x.x.x umbrel.local
 How to run the bot
 1. git clone https://github.com/mrWiga/satoshi_LN_bot.git
 2. run npm install to install all of the packages
-3. Go to supabase.io, create a project and import database importSQL.txt - maybe someone can automate tables creation.
+3. Go to supabase.io, create a project and import database importSQL.sql - maybe someone can automate tables creation.
 4. Rename config_sample.js to config.js and do the configuration
 5. node startBot.js to start your bot

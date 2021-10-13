@@ -24,6 +24,11 @@ function QRGenerate(message, id) {
 
 function downloadQRImageAPI(message, id) {
   return new Promise((resolve, reject) => {
+    //create folder if it doesnt exist
+    let dir = './image_temp';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
     let path = `${__dirname}/image_temp/qrcode-${id}.jpg`;
     let download = function (uri, filename, callback) {
       request.head(uri, function (err, res, body) {
@@ -65,6 +70,11 @@ function downloadQRImageAPI(message, id) {
 
 function downloadQRImageAPIGoogle(message, id) {
   return new Promise((resolve, reject) => {
+    //create folder if it doesnt exist
+    let dir = './image_temp';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
     let path = `${__dirname}/image_temp/qrcode_-${id}.jpg`;
     let download = function (uri, filename, callback) {
       request.head(uri, function (err, res, body) {

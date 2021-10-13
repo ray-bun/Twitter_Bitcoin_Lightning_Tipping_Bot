@@ -87,7 +87,11 @@ function manaullyReadQR(qrurl) {
   return new Promise((resolve, reject) => {
     let decodeURL = decodeURIComponent(qrurl);
     console.log("URL: ", decodeURL);
-
+    //create folder if it doesnt exist
+    let dir = './image_temp';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
     let random = Math.floor(Math.random() * 100000);
     let path = `${__dirname}/image_temp/qrcode_temp-${random}.jpg`;
 
