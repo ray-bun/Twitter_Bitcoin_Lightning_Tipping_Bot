@@ -7,8 +7,10 @@ Requirements
 
 How to run the bot
 1. git clone https://github.com/mrWiga/satoshi_LN_bot.git
-2. Rename config_sample.js to config.js and do the configuration
-3. node startBot.js to start your bot
+2. run npm install to install all of the packages
+3. Rename config_sample.js to config.js and do the configuration
+4. node startBot.js to start your bot
+
 
 
 
