@@ -26,7 +26,7 @@ module.exports.twitterAccountsArray = Array(twitter_1, twitter_2);
 // Can help reduce twitter API limit if false. Example, if false it'll not tweet out already paid message etc.
 module.exports.enableErrorTwit = true;
 
-// Recommend you dedicate a
+// Recommend you dedicate a seperate umbrel in case someone try to drain your funds.
 module.exports.umbrilpassword = { password: "xxxxxx" };
 //your bot twitter account username. example satoshi_LN_bot
 module.exports.twitteraccount = "xxxx";
