@@ -1,8 +1,7 @@
-<p align="center">
+<p>
   	<img alt="logo" src="resources/logo.jpg" >
 </p>
-# TWITTER LIGHTNING TIPPING BOT
-# RUN THIS BOT AT YOUR OWN RISK
+# TWITTER LIGHTNING TIPPING BOT - RUN THIS BOT AT YOUR OWN RISK!
 
 ### Requirements
 1. Umbrel node https://getumbrel.com/ with inbound, and outbound capacity. 
@@ -20,7 +19,7 @@ npm install
 1. Go to supabase.io, create a project and import database importSQL.sql - maybe someone can automate tables creation.
 3. Rename config_sample.js to config.js and do the configuration
 
-#### Commands
+### Commands
 ```
 !tip 1000 - will tip twitter user 1000 Sats.
 !pay - will pay the QR invoice. 
