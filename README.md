@@ -21,7 +21,13 @@ npm install
 
 ### Commands
 ```
-!tip 1000 - will tip twitter user 1000 Sats.
+!tip 1000 - will tip twitter user 1,000 Sats.
 !pay - will pay the QR invoice. 
-!donate 1000 - will allow twitter user to donate 1000 sats to the bot.
+!donate 1000 - will allow twitter user to donate 1,000 sats to the bot.
+!GivePowerOfSatoshi - those to have donated over 10,000 sats can use this to give another twitter user the power to tip. 
+```
+
+### Start your bot
+```
+node startBot.js
 ```
