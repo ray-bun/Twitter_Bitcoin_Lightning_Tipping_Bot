@@ -1,6 +1,7 @@
 
 // Create App and get API keys from: https://developer.twitter.com/en/portal/dashboard
 // Must have read/write access
+//app2
 twitter_1 = {
   consumer_key: "XXXX",
   consumer_secret: "XXXX",
@@ -9,7 +10,7 @@ twitter_1 = {
   timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
   strictSSL: true, // optional - requires SSL certificates to be valid.
 };
-
+//app2
 twitter_2 = {
   consumer_key: "XXX",
   consumer_secret: "XX",
