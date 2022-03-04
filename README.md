@@ -11,7 +11,7 @@ I also recommended that you add your umbrel node IP address x.x.x.x umbrel.local
 
 ### Installation
 ```
-git clone https://github.com/mrWiga/satoshi_LN_bot.git
+git clone https://github.com/RielBitcoin/Twitter_Bitcoin_Lightning_Tipping_Bot.git
 npm install
 ```
 
